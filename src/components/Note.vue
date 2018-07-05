@@ -17,22 +17,17 @@ export default {
       categories: ["#notes/test", "#important/test"],
       sections: [
         {
-          rendered: `
-              <h2>Hello World</h2> <p>lorem ipsum dolor sit amet</p> 
-              <script>alert(1)<\/script>
-            `,
           content: `
-            ## Hello world
+## Hello world
 
-            lorem ipsum dolor sit amet
+lorem ipsum *dolor* sit **amet**
           `,
           id: "dfsdgsrhgsr"
         },
         {
-          rendered:
-            "<h3>Another section</h3> <p>jsdksjdfnjsn eunf jenfkjsnef efjnskejfnksejn</p>",
-          content: `### Another section
-            jsdksjdfnjsn eunf jenfkjsnef efjnskejfnksejn`,
+          content: `
+### Another section
+jsdksjdfnjsn eunf jenfkjsnef efjnskejfnksejn`,
           id: "dfsdgsdfgrhgsr"
         }
       ],
@@ -60,7 +55,8 @@ export default {
 <style scoped>
 .note {
   position: relative;
-  width: 100%;
+  margin-top: 15px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
 }
