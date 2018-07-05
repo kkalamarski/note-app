@@ -1,8 +1,11 @@
 <template>
   <article class="section">
+    <h2 class="section__handle">
+      <icon name="sticky-note" scale="1.5" />
+    </h2>
     <div class="section__rendered" v-html="rendered" />
-    <modal 
-      :adaptive="true" 
+    <modal
+      :adaptive="true"
       :name="'edit-section' + section.id"
       width="90%"
       height="90%"
@@ -22,6 +25,7 @@
 <script>
 import "vue-awesome/icons/edit";
 import "vue-awesome/icons/save";
+import "vue-awesome/icons/sticky-note";
 import marked from "marked";
 
 export default {
@@ -55,8 +59,6 @@ export default {
 .section {
   position: relative;
   display: flex;
-  flex-direction: column;
-  wdith: 100%;
   text-align: left;
   margin-top: 10px;
 
@@ -65,6 +67,10 @@ export default {
       opacity: 1;
     }
   }
+}
+.section__handle {
+  margin-right: 15px;
+  color: white;
 }
 .section__rendered {
   text-align: left;
