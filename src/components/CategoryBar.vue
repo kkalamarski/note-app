@@ -21,6 +21,7 @@ export default {
 .category {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .category__item {
   display: inline-block;

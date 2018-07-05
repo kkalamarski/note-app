@@ -29,6 +29,48 @@ lorem ipsum *dolor* sit **amet**
 ### Another section
 jsdksjdfnjsn eunf jenfkjsnef efjnskejfnksejn`,
           id: "dfsdgsdfgrhgsr"
+        },
+        {
+          content: `
+## Hello world
+
+lorem ipsum *dolor* sit **amet**
+          `,
+          id: "1241"
+        },
+        {
+          content: `
+### Another section
+jsdksjdfnjsn eunf jenfkjsnef efjnskejfnksejn`,
+          id: "515"
+        },
+        {
+          content: `
+## Hello world
+
+lorem ipsum *dolor* sit **amet**
+          `,
+          id: "61"
+        },
+        {
+          content: `
+### Another section
+jsdksjdfnjsn eunf jenfkjsnef efjnskejfnksejn`,
+          id: "13613"
+        },
+        {
+          content: `
+## Hello world
+
+lorem ipsum *dolor* sit **amet**
+          `,
+          id: "136136"
+        },
+        {
+          content: `
+### Another section
+jsdksjdfnjsn eunf jenfkjsnef efjnskejfnksejn`,
+          id: "13778"
         }
       ],
       editing: false
@@ -55,6 +97,7 @@ jsdksjdfnjsn eunf jenfkjsnef efjnskejfnksejn`,
 <style scoped>
 .note {
   position: relative;
+  overflow: auto;
   margin-top: 15px;
   padding: 15px;
   display: flex;
