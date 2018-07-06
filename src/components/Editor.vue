@@ -1,43 +1,25 @@
 <template>
   <article class="section">
-    <h2 class="section__handle">
-      <icon name="sticky-note" scale="1.5" />
-    </h2>
     <div class="section__rendered" v-html="rendered" />
-    <modal
-      :adaptive="true"
-      :name="'edit-section' + section.id"
-      width="90%"
-      height="90%"
-    >
-      <div class="section__modal-body">
-        <textarea class="section__textarea" v-model="section.content" />
-        <button class="section__save" @click="save">
-          <icon name="save" scale="2"></icon>&nbsp; Save
-        </button>
-      </div>
-    </modal>
-    <button class="section__edit" @click="enableEditing">
-      <icon name="edit" scale="2"></icon>
-    </button>
   </article>
 </template>
+
 <script>
 import "vue-awesome/icons/edit";
 import "vue-awesome/icons/save";
 import "vue-awesome/icons/sticky-note";
 import marked from "marked";
+import { db } from "../firebase";
 
 export default {
-  name: "Section",
+  name: "Editor",
   data() {
     return {
-      rendered: marked(this.section.content.trim()),
-      edit: false
+      rendered: marked(this.note.content.trim())
     };
   },
   props: {
-    section: {
+    note: {
       type: Object,
       default: () => ({})
     }
@@ -50,7 +32,6 @@ export default {
     save() {
       this.edit = false;
       this.$modal.hide("edit-section" + this.section.id);
-      this.rendered = marked(this.section.content.trim());
     }
   }
 };
@@ -70,7 +51,7 @@ export default {
 }
 .section__handle {
   margin-right: 15px;
-  color: white;
+  color: black;
 }
 .section__rendered {
   text-align: left;
